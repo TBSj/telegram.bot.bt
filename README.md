@@ -9,7 +9,7 @@ You can install the development version of telegram.bot.dt from [GitHub](https:/
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("TSjB/telegram.bot.dt")
+devtools::install_github("TBSj/telegram.bot.dt")
 
 ```
 ## Example
