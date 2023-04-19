@@ -40,7 +40,8 @@ InlineQueryResult <- function(type,
     params
   )
 
-  structure(as.data.frame(InlineQueryResult), class = "InlineQueryResult")
+  # structure(as.data.frame(InlineQueryResult), class = "InlineQueryResult")
+  return(as.data.frame(InlineQueryResult))
 }
 
 #' @rdname InlineQueryResult
