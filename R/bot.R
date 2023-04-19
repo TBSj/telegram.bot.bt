@@ -1787,7 +1787,7 @@ answerInlineQuery <- function(inline_query_id,
                               switch_pm_parameter = NULL) { # nocov start
   url <- sprintf("%s/answerInlineQuery", private$base_url)
 
-  # results <- to_json(results)
+  results <- to_json(results)
 
   data <- list(inline_query_id = inline_query_id, results = results)
 
@@ -1807,7 +1807,7 @@ answerInlineQuery <- function(inline_query_id,
     data[["switch_pm_parameter"]] <- switch_pm_parameter
   }
 
-  result <- private$request(url, data, encode = 'json')
+  result <- private$request(url, data)
 
   invisible(result)
 } # nocov end
