@@ -9,7 +9,7 @@ You can install the development version of telegram.bot.dt from [GitHub](https:/
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("TBSj/telegram.bot.dt")
+devtools::install_github("TBSj/telegram.bot.bt")
 
 ```
 ## Example
@@ -17,7 +17,7 @@ devtools::install_github("TBSj/telegram.bot.dt")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(telegram.bot.dt)
+library(telegram.bot.bt)
 
  token <- "your bot's token"
  bot <- Bot(token = token)
