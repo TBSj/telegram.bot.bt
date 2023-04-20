@@ -1,4 +1,4 @@
-# telegram.bot.dt
+# telegram.bot.bt
  For Telegram Bot API in R
 
 The goal of telegram.bot.dt is to use Telegram Bot API in R. This package inherits "telegram.bot" library. In additional, it contains "Payments" module.
