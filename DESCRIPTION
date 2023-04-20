@@ -1,7 +1,7 @@
-Package: telegram.bot.dt
+Package: telegram.bot.bt
 Type: Package
 Title: For Telegram Bot API in R
-Version: 0.1.0
+Version: 0.2.0
 Author: Bogdan Tewnalany
 Maintainer: Bogdan Tewnalany <bogdan.tewnalany@gmail.com>
 Description: This package inherits "telegram.bot" library 
