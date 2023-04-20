@@ -1025,42 +1025,42 @@ sendChatAction <- function(chat_id,
 #' allowing multiple users to pay directly from the forwarded message, using
 #' the same invoice. If non-empty, forwarded copies of the sent message
 #' will have a URL button with a deep link to the bot (instead of a Pay button),
-#'  with the value used as the start parameter.
+#'with the value used as the start parameter.
 #' @param provider_data (Optional). Data about the invoice, which will be
 #' shared with the payment provider. A detailed description of required fields
 #' should be provided by the payment provider.
 #' @param photo_url (Optional). URL of the product photo for the invoice.
 #' Can be a photo of the goods or a marketing image for a service.
 #' People like it better when they see what they are paying for.
-#' @param photo_size (Optional). Photo size in bytes
-#' @param photo_width (Optional). Photo width
-#' @param photo_height (Optional). Photo height
+#' @param photo_size (Optional). Photo size in bytes.
+#' @param photo_width (Optional). Photo width.
+#' @param photo_height (Optional). Photo height.
 #' @param need_name (Optional). Pass \code{TRUE}, if you require the user's full
 #' name to complete the order
 #' @param need_phone_number (Optional). Pass \code{TRUE}, if you require the user's
-#' phone number to complete the order
+#' phone number to complete the order.
 #' @param need_email (Optional). Pass \code{TRUE}, if you require the user's email
-#' address to complete the order
+#' address to complete the order.
 #' @param need_shipping_address (Optional). Pass \code{TRUE}, if you require
-#' the user's shipping address to complete the order
+#' the user's shipping address to complete the order.
 #' @param send_phone_number_to_provider (Optional). Pass \code{TRUE},
-#' if the user's phone number should be sent to provider
+#' if the user's phone number should be sent to provider.
 #' @param send_email_to_provider (Optional). Pass \code{TRUE},
-#' if the user's email address should be sent to provider
+#' if the user's email address should be sent to provider.
 #' @param is_flexible (Optional). Pass \code{TRUE},
-#' if the final price depends on the shipping method
+#' if the final price depends on the shipping method.
 #' @param disable_notification (Optional). Sends the message silently.
 #' Users will receive a notification with no sound.
 #' @param protect_content (Optional). Protects the contents of the sent message
-#' from forwarding and saving
+#' from forwarding and saving.
 #' @param reply_to_message_id (Optional). If the message is a reply, ID of the
 #' original message.
 #' @param allow_sending_without_reply (Optional). Pass \code{TRUE}, if the message
-#' should be sent even if the specified replied-to message is not found
+#' should be sent even if the specified replied-to message is not found.
 #' @param reply_markup (Optional). Object for an inline keyboard. If empty,
 #' one 'Pay total price' button will be shown. If not empty,
 #' the first button must be a Pay button.
-#'     \itemize{}
+#' \itemize{
 #'      \item{\code{\link{InlineKeyboardMarkup}}}
 #'     }
 #' @examples

@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' library(telegram.bot.DT)
+#' library(telegram.bot.bt)
 #'
 #' start <- function(bot, update) {
 #'   bot$sendMessage(
@@ -35,7 +35,7 @@
 #'
 #' updater$start_polling() # Send '/start' to the bot
 #' }
-#' @name telegram.bot
+#' @name telegram.bot.bt
 #' @docType package
 #' @keywords internal
 #' @importFrom R6 R6Class

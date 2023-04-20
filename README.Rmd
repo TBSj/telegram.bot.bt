@@ -18,15 +18,15 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of telegram.bot.dt is to use Telegram Bot API in R. This package inherits "telegram.bot" library. In additional, it contains "Payments" module.
+The goal of telegram.bot.bt is to use Telegram Bot API in R. This package inherits "telegram.bot" library. In additional, it contains "Payments" module.
 
 ## Installation
 
-You can install the development version of telegram.bot.dt from [GitHub](https://github.com/) with:
+You can install the development version of telegram.bot.bt from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("TSjB/telegram.bot.dt")
+devtools::install_github("TSjB/telegram.bot.bt")
 
 ```
 
@@ -35,7 +35,7 @@ devtools::install_github("TSjB/telegram.bot.dt")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(telegram.bot.dt)
+library(telegram.bot.bt)
 
  token <- "your bot's token"
  bot <- Bot(token = token)

@@ -80,7 +80,7 @@ If left empty, forwarded copies of the sent message will have a Pay button,
 allowing multiple users to pay directly from the forwarded message, using
 the same invoice. If non-empty, forwarded copies of the sent message
 will have a URL button with a deep link to the bot (instead of a Pay button),
- with the value used as the start parameter.}
+with the value used as the start parameter.}
 
 \item{provider_data}{(Optional). Data about the invoice, which will be
 shared with the payment provider. A detailed description of required fields
@@ -90,44 +90,51 @@ should be provided by the payment provider.}
 Can be a photo of the goods or a marketing image for a service.
 People like it better when they see what they are paying for.}
 
-\item{photo_size}{(Optional). Photo size in bytes}
+\item{photo_size}{(Optional). Photo size in bytes.}
 
-\item{photo_width}{(Optional). Photo width}
+\item{photo_width}{(Optional). Photo width.}
 
-\item{photo_height}{(Optional). Photo height}
+\item{photo_height}{(Optional). Photo height.}
 
 \item{need_name}{(Optional). Pass \code{TRUE}, if you require the user's full
 name to complete the order}
 
 \item{need_phone_number}{(Optional). Pass \code{TRUE}, if you require the user's
-phone number to complete the order}
+phone number to complete the order.}
 
 \item{need_email}{(Optional). Pass \code{TRUE}, if you require the user's email
-address to complete the order}
+address to complete the order.}
 
 \item{need_shipping_address}{(Optional). Pass \code{TRUE}, if you require
-the user's shipping address to complete the order}
+the user's shipping address to complete the order.}
 
 \item{send_phone_number_to_provider}{(Optional). Pass \code{TRUE},
-if the user's phone number should be sent to provider}
+if the user's phone number should be sent to provider.}
 
 \item{send_email_to_provider}{(Optional). Pass \code{TRUE},
-if the user's email address should be sent to provider}
+if the user's email address should be sent to provider.}
 
 \item{is_flexible}{(Optional). Pass \code{TRUE},
-if the final price depends on the shipping method}
+if the final price depends on the shipping method.}
 
 \item{disable_notification}{(Optional). Sends the message silently.
 Users will receive a notification with no sound.}
 
 \item{protect_content}{(Optional). Protects the contents of the sent message
-from forwarding and saving}
+from forwarding and saving.}
 
 \item{reply_to_message_id}{(Optional). If the message is a reply, ID of the
 original message.}
 
 \item{allow_sending_without_reply}{(Optional). Pass \code{TRUE}, if the message
-should be sent even if the specified replied-to message is not found}
+should be sent even if the specified replied-to message is not found.}
+
+\item{reply_markup}{(Optional). Object for an inline keyboard. If empty,
+one 'Pay total price' button will be shown. If not empty,
+the first button must be a Pay button.
+\itemize{
+     \item{\code{\link{InlineKeyboardMarkup}}}
+    }}
 }
 \description{
 Use this method to send invoice.

@@ -4,8 +4,8 @@ Title: For Telegram Bot API in R
 Version: 0.2.0
 Author: Bogdan Tewnalany
 Maintainer: Bogdan Tewnalany <bogdan.tewnalany@gmail.com>
-Description: This package inherits "telegram.bot" library 
-             It contains "Payment" module.
+Description: This package inherits "telegram.bot" library.
+             And it also contains "Payment" and "Inline query" modules.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
