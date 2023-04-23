@@ -1807,7 +1807,8 @@ answerInlineQuery <- function(inline_query_id,
     data[["switch_pm_parameter"]] <- switch_pm_parameter
   }
 
-  result <- private$request(url, data, encode = 'json')
+  # result <- private$request(url, data, encode = 'json')
+  result <- private$request(url, data)
 
   invisible(result)
 } # nocov end
