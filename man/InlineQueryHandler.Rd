@@ -8,9 +8,11 @@
 An \code{\link{R6Class}} object.
 }
 \usage{
-InlineQueryHandler(callback)
+InlineQueryHandler(query, pattern = NULL)
 }
 \arguments{
+\item{pattern}{(Optional). Regex pattern to test.}
+
 \item{callback}{The callback function for this handler.
 See \code{\link{Handler}} for information about this function.}
 }

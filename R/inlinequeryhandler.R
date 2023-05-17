@@ -9,39 +9,61 @@
 #' @format An \code{\link{R6Class}} object.
 #' @param callback The callback function for this handler.
 #'   See \code{\link{Handler}} for information about this function.
+#' @param pattern (Optional). Regex pattern to test.
 #'
 #' @export
 
 
-InlineQueryHandler <- function(callback) {
-  InlineQueryHandlerClass$new(callback)
+InlineQueryHandler <- function(query,
+                               pattern = NULL) {
+  InlineQueryHandlerClass$new(query, pattern)
 }
 
 
-InlineQueryHandlerClass <- R6::R6Class("InlineQueryHandler",
-                                            inherit = HandlerClass,
-                                            public = list(
-                                              initialize = function(callback) {
-                                                self$callback = callback
-                                              },
+InlineQueryHandlerClass <- R6::R6Class(
+  "InlineQueryHandler",
+  inherit = HandlerClass,
+  public = list(
+    initialize = function(query, pattern) {
+      self$query <- query
 
-                                              check_update = function(update) {
+      if (!missing(pattern)) {
+        self$pattern <- pattern
+      }
+    },
+    is_allowed_update = function(update) {
+      !is.null(update$inline_query)
+    },
 
-                                                if( !is.null(update$inline_query)){
-                                                  return(TRUE)
-                                                }
-                                                else{
-                                                  return(NULL)
-                                                }
+    # This method is called to determine if an update should be handled by
+    # this handler instance.
+    check_update = function(update) {
+      if (is.Update(update) && self$is_allowed_update(update)) {
+        if (!is.null(self$pattern) && !is.null(update$callback_query$query)) {
+          return(grepl(self$pattern, update$inline_query$query))
+        } else {
+          return(TRUE) # nocov
+        }
+      } else {
+        return(FALSE) # nocov
+      }
+    },
 
+    # check_update = function(update) {
+    #   if (!is.null(update$inline_query)) {
+    #     return(TRUE)
+    #   }
+    #   else{
+    #     return(NULL)
+    #   }
+    # },
 
-                                              },
+    handle_update = function(update, dispatcher) {
+      self$query(dispatcher$bot, update)
+    },
 
-                                              handle_update = function(update, dispatcher) {
-                                                self$callback(dispatcher$bot, update)
-                                              },
-
-                                              # Params
-                                              callback = NULL
-                                            )
+    # Params
+    query = NULL,
+    pattern = NULL
+  )
 )
