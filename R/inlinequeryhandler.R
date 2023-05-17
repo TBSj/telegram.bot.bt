@@ -39,7 +39,7 @@ InlineQueryHandlerClass <- R6::R6Class(
     # this handler instance.
     check_update = function(update) {
       if (is.Update(update) && self$is_allowed_update(update)) {
-        if (!is.null(self$pattern) && !is.null(update$callback_query$query)) {
+        if (!is.null(self$pattern) && !is.null(update$inline_query$query)) {
           return(grepl(self$pattern, update$inline_query$query))
         } else {
           return(TRUE) # nocov
