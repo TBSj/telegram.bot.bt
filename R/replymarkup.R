@@ -46,6 +46,9 @@ is.KeyboardButton <- function(x) {
 #'
 #' @param keyboard List of button rows, each represented by a list of
 #'     \code{\link{KeyboardButton}} objects.
+#' @param is_persistent Optional. Requests clients to always show the keyboard
+#'     when the regular keyboard is hidden. Defaults to false, in which case
+#'     the custom keyboard can be hidden and opened with a keyboard icon.
 #' @param resize_keyboard (Optional). Requests clients to resize the keyboard
 #'     vertically for optimal fit. Defaults to \code{FALSE}, in which case the
 #'     custom keyboard is always of the same height as the app's standard
@@ -81,6 +84,7 @@ is.KeyboardButton <- function(x) {
 #' }
 #' @export
 ReplyKeyboardMarkup <- function(keyboard,
+                                is_persistent = NULL,
                                 resize_keyboard = NULL,
                                 one_time_keyboard = NULL,
                                 selective = NULL) {
@@ -96,6 +100,7 @@ ReplyKeyboardMarkup <- function(keyboard,
 
   ReplyKeyboardMarkup <- list(
     keyboard = keyboard,
+    is_persistent = is_persistent,
     resize_keyboard = resize_keyboard,
     one_time_keyboard = one_time_keyboard,
     selective = selective

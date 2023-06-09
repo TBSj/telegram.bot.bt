@@ -6,6 +6,7 @@
 \usage{
 ReplyKeyboardMarkup(
   keyboard,
+  is_persistent = NULL,
   resize_keyboard = NULL,
   one_time_keyboard = NULL,
   selective = NULL
@@ -14,6 +15,10 @@ ReplyKeyboardMarkup(
 \arguments{
 \item{keyboard}{List of button rows, each represented by a list of
 \code{\link{KeyboardButton}} objects.}
+
+\item{is_persistent}{Optional. Requests clients to always show the keyboard
+when the regular keyboard is hidden. Defaults to false, in which case
+the custom keyboard can be hidden and opened with a keyboard icon.}
 
 \item{resize_keyboard}{(Optional). Requests clients to resize the keyboard
 vertically for optimal fit. Defaults to \code{FALSE}, in which case the
